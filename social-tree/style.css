@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: Poppins}
+
+:root {
+    --body-bg-color: #1d2135;
+    --primary-color: #a5afd4;
+    --default-width: 400px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--body-bg-color);
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: var(--default-width);
+    max-width: 100vw;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header--foto{
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .25rem;
+    border: 2px solid var(--primary-color);
+}
+
+.header .header--foto img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header .header--link{
+    font-weight: 300;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttons-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 .5rem 0 .5rem;
+}
+
+.buttons-links a{
+    border: 2px solid var(--primary-color);
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    scale: 1;
+    transition: scale ease-in-out .3s;
+} .buttons-links a:hover{ scale: 1.05; }
+
+.icons-links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5rem;
+}
+
+.icons-links a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.45rem;
+    scale: 1;
+    transition: scale ease-in-out .2s;
+    padding: 0  0.875rem;
+} .icons-links a:hover{ scale: 1.5; }
