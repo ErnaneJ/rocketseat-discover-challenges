@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./style.css">
+  <script src="./api.js"></script>
   <title>Portfolio</title>
 </head>
 <body>
@@ -13,134 +14,149 @@
     <section id="informations">
       <div class="card about">
         <img 
+          id="profile-image"
           width="128"
           height="128"
           src="https://www.github.com/ernanej.png"   
           alt="Imagem de perfil de Ernane Ferreira presente em sua conta pessoal do github"
         />
         <div>
-          <h1>Ernane Ferreira</h1>
-          <span>Full Stack Developer</span>
+          <h1 id="profile-name">Ernane Ferreira</h1>
+          <span id="profile-bio">Full Stack Developer</span>
         </div>
       </div>
-      <div class="ïnformations-container">
+      <div class="informations-container">
         <div class="card contact">
           <ul>
-            <li> <a href=""><img src="./assets/map-pin.svg" alt=""/> <span>Brasil</span></a></li>
-            <li> <a href=""><img src="./assets/briefcase.svg" alt=""/> <span>Real Seguro Viagem</span></a></li>
-            <li> <a href=""><img src="./assets/github.svg" alt=""/> <span>ErnaneJ</span></a></li>
-            <li> <a href=""><img src="./assets/linkedin.svg" alt=""/> <span>ernanej</span></a></li>
-            <li> <a href=""><img src="./assets/twitter.svg" alt=""/> <span>-</span></a></li>
-            <li> <a href=""><img src="./assets/globe.svg" alt=""/> <span>https://ernane.dev</span></a></li>
-            <li> <a href=""><img src="./assets/mail.svg" alt=""/> <span>ernane.junior25@gmail.com</span></a></li>
+            <li> <a href="#"><img src="./assets/map-pin.svg" alt="Icone de ponteiro de mapa"/> <span id="contact-location">Brasil</span></a></li>
+            <li> <a target="_blank" href="https://www.seguroviagem.srv.br/"><img src="./assets/briefcase.svg" alt="icone de uma maleta"/> <span id="contact-work">Real Seguro Viagem</span></a></li>
+            <li> <a target="_blank" href="https://github.com/ernanej"><img src="./assets/github.svg" alt="icone do github"/> <span id="contact-github">ErnaneJ</span></a></li>
+            <li> <a target="_blank" href="https://www.linkedin.com/in/ernane"><img src="./assets/linkedin.svg" alt="icone do linkedin"/> <span id="contact-linkedin">Ernane</span></a></li>
+            <li> <a target="_blank" href="https://twitter.com/Ernanefe"><img src="./assets/twitter.svg" alt="icone do twitter"/> <span id="contact-twitter">Ernanefe</span></a></li>
+            <li> <a target="_blank" href="https://ernane.dev"><img src="./assets/globe.svg" alt="icone de um globo mundo"/> <span id="contact-site">https://ernane.dev</span></a></li>
+            <li> <a target="_blank" href="mailto:ernane.junior25@gmail.com"><img src="./assets/mail.svg" alt="icone de uma carta representando email"/> <span id="contact-mail">ernane.junior25@gmail.com</span></a></li>
           </ul>
         </div>
         <div class="card tecnologies">
           <h2>Tecnologias</h2>
-          <ul>
+          <ul id="languages">
             <li> javascript </li>
-            <li> svelte </li>
-            <li> ruby </li>
-            <li> typescript </li>
-            <li> react </li>
-            <li> node </li>
-            <li> sql </li>
           </ul>
         </div>
         <div class="card experiences">
-          <h2 class="experiences--title">Experiências</h2>
-          <ul class="experiences--list">
-            <li class="experiences--item">
-              <h3 class="experiences--item--title">Real Seguro Viagem</h3>
-              <span class="experiences--item--time">2021 - Atualmente</span>
-              <span class="experiences--item--about">Software developer experience</span>
+          <h2>Experiências</h2>
+          <ul>
+            <li>
+              <div>
+                <h3>Real Seguro Viagem</h3>
+                <span>2022 - Atualmente</span>
+                <span>Desenvolvedor de Software Full Stack Web</span>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>Real Seguro Viagem</h3>
+                <span>2021 - 2022</span>
+                <span>Estagiário de Desenvolvimento de Software</span>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>LAIS</h3>
+                <span>2022 - 2023</span>
+                <span>Pesquisador bolsista - Desenvolvedor de Software</span>
+              </div>
             </li>
   
-            <li class="experiences--item">
-              <h3 class="experiences--item--title">LAIS</h3>
-              <span class="experiences--item--time">2022 - 2023</span>
-              <span class="experiences--item--about">Software developer experience</span>
+            <li>
+              <div>
+                <h3>EMUFRN</h3>
+                <span>2020 - 2021</span>
+                <span>Bolsista de Apoio Técnico</span>
+              </div>
             </li>
           </ul>
         </div>
         <div class="card education">
-          <h2 class="education--title">Educação</h2>
-          <ul class="education--list">
-            <li class="education--item">
-              <h3 class="education--item--title">Real Seguro Viagem</h3>
-              <span class="education--item--time">2021 - Atualmente</span>
-              <span class="education--item--about">Software developer experience</span>
+          <h2>Educação</h2>
+          <ul>
+            <li>
+              <div>
+                <h3>UFRN</h3>
+                <span>2019 - Atualmente</span>
+                <span>Bacharelado em Ciências e Tecnologia, Tecnologia de Computação</span>
+              </div>
             </li>
   
-            <li class="education--item">
-              <h3 class="education--item--title">LAIS</h3>
-              <span class="education--item--time">2022 - 2023</span>
-              <span class="education--item--about">Software developer experience</span>
+            <li>
+              <div>
+                <h3>IMD/UFRN</h3>
+                <span>2017 - 2019</span>
+                <span>Ensino Técnico, Tecnologia da Informação - Eletrônica</span>
+              </div>
             </li>
           </ul>
         </div>
       </div>
     </section>
+
     <section id="content">
       <div class="repositories">
         <div class="card repositories--header">
           <h2>Meus projetos</h2>
-          <a href="https://github.com/ErnaneJ?tab=repositories">Ver todos</a>
+          <a target="_blank" href="https://github.com/ErnaneJ?tab=repositories">Ver todos</a>
         </div>
 
-        <div class="repositories--content">
+        <div id="repositories--cards" class="repositories--content">
           <div class="card repositories--content--card">
-            <h4 class="repositories--content--card--title"><img src="./assets/folder.svg"/><span>my-onix</span></h4>
-            <p class="repositories--content--card--description">Consulte os códigos de erro que aparecem no painel do veículo Onix.            </p>
+            <h4 class="repositories--content--card--title"><img src="./assets/folder.svg"/><span> - </span></h4>
+            <p class="repositories--content--card--description"> - </p>
             <div class="repositories--content--card--informations">
-              <span> <img src="./assets/star.svg" /> 100 </span>
-              <span> <img src="./assets/git-branch.svg" /> 156 </span>
-              <span> <img src="./assets/star.svg" /> Javascript </span>
-            </div>
-          </div>
-
-          <div class="card repositories--content--card">
-            <h4 class="repositories--content--card--title"><img src="./assets/folder.svg"/><span>my-onix</span></h4>
-            <p class="repositories--content--card--description">Consulte os códigos de erro que aparecem no painel do veículo Onix.            </p>
-            <div class="repositories--content--card--informations">
-              <span> <img src="./assets/star.svg" /> 100 </span>
-              <span> <img src="./assets/git-branch.svg" /> 156 </span>
-              <span> <img src="./assets/star.svg" /> Javascript </span>
+              <div>
+                <span> <img src="./assets/star.svg" /> - </span>
+                <span> <img src="./assets/git-branch.svg" /> - </span>
+              </div>
+              <span> - </span>
             </div>
           </div>
         </div>
-
       </div>
-      <div class="posts">
+
+      <!-- <div class="posts">
         <div class="card posts--header">
           <h2>Recent Posts</h2>
-          <div class="posts--content">
-            <div class="card posts--content--card">
-              <img 
-                src="https://www.github.com/ernanej.png" width="128" height="128"
-                alt="Imagem de perfil de Ernane Ferreira presente em sua conta pessoal do github"
-              />
-              <div class="posts--content--card--informations">
-                <div class="">
-                  <h4>Erro adb devices no Genymotion e Android Studio (React Native)</h4>
-                  <span>2 anos atrás</span>
-                </div>
-                <p>Erro adb devices no Genymotion e Android Studio (React Native)</p>
-                <div class="">
-                  <span>#react-ative</span>
-                  <span>#react-ative</span>
-                  <span>#react-ative</span>
-                  <span>#react-ative</span>
-                </div>
+        </div>
+
+        <div class="posts--content">
+          <div class="card posts--content--card">
+            <img 
+              src="https://www.github.com/ernanej.png" width="128" height="128"
+              alt="Imagem de perfil de Ernane Ferreira presente em sua conta pessoal do github"
+            />
+            <div class="posts--content--card--informations">
+              <div class="posts--content--card--informations--header">
+                <h4>Erro adb devices no Genymotion e Android Studio (React Native)</h4>
+                <span>2 anos atrás</span>
+              </div>
+              <p>Erro adb devices no Genymotion e Android Studio (React Native)</p>
+              <div class="posts--content--card--informations--tags">
+                <span>#react-ative</span>
+                <span>#react-ative</span>
+                <span>#react-ative</span>
+                <span>#react-ative</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
   </main>
   <footer>
-    Feito com 💙 por <a href="https://links.ernane.dev/" target="_blank"> Ernane Ferreira <a>
+    Feito com 💙 por <a target="_blank" href="https://links.ernane.dev/" target="_blank"> Ernane Ferreira <a>
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>

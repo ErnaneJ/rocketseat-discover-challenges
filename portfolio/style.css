@@ -9,6 +9,19 @@
   --bg-techs: #CB92B1;
 }
 
+::-webkit-scrollbar {
+  width: .5em;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-cards);
+  border-radius: 1rem;
+}
+
 body{ 
   display: flex;
   align-items: center;
@@ -17,16 +30,20 @@ body{
   background-color: var(--body-bg-color); 
   color: var(--text-color); 
   height: 100vh; width: 100vw;
-  padding: 2rem;
+  padding: 2rem 2rem 0rem 2rem;
 }
 
 main{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 1.5rem;
-  overflow: hidden;
+  gap: 2rem;
   height: 100%; width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px 1px rgba(59, 59, 59, 0.1);
+  overflow: hidden;
 }
 
 .card{
@@ -38,7 +55,6 @@ main{
 }
 
 #informations{
-  overflow: hidden;
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -47,21 +63,26 @@ main{
   flex-direction: column;
   width: 30vw;
   max-width: 360px;
+  border-radius: .75rem;
 }
 
-#informations .about{
+.about{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-#informations .about img{
+#profile-bio{
+  text-align: center;
+}
+
+.about img{
   width: 128px;
   height: 128px;
 }
 
-#informations .about div{
+.about div{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,17 +91,17 @@ main{
   gap: .25rem;
 }
 
-#informations .about div h1{
+.about div h1{
   font-size: 1.25em;
   font-weight: 700;
 }
 
-#informations .about div span{
+.about div span{
   font-size: .75em;
   font-weight: 300;
 }
 
-#informations .ïnformations-container{
+.informations-container{
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -88,9 +109,13 @@ main{
   gap: 1.5rem;
   flex-direction: column;
   overflow: auto;
+  padding-right: .75rem;
+  margin-right: -1.25rem;
+  z-index: 1;
+  padding-bottom: 1rem;
 }
 
-#informations .ïnformations-container .contact ul{
+.contact ul{
   list-style: none;
   display: flex;
   align-items: flex-start;
@@ -99,7 +124,7 @@ main{
   gap: .75rem;
 }
 
-#informations .ïnformations-container .contact ul li a{
+.contact ul li a{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -107,9 +132,9 @@ main{
   text-decoration: none;
   color: var(--text-color);
   transition: color ease-in-out .3s;
-} #informations .ïnformations-container .contact ul li a:hover{ color: var(--bg-techs); }
+} .contact ul li a:hover{ color: var(--bg-techs); }
 
-#informations .ïnformations-container .tecnologies ul{
+.tecnologies ul{
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -118,18 +143,302 @@ main{
   margin-top: 1rem;
   gap: .5rem;
 }
-#informations .ïnformations-container .tecnologies ul li{
+.tecnologies ul li{
   padding: .25rem 1.25rem;
   background-color: var(--bg-techs);
   color: var(--body-bg-color);
   border-radius: 1rem;
+  font-size: .85em;
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+.experiences ul,
+.education ul{
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+.experiences ul li,
+.education ul li{
+  margin-bottom: 1rem;
+}
+
+.experiences ul li div,
+.education ul li div{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.experiences ul li div span:nth-child(2),
+.education ul li div span:nth-child(2){
+  font-size: .75em;
+}
+
+.experiences ul li div span:nth-child(3),
+.education ul li div span:nth-child(3){
+  font-size: .85em;
+  font-weight: 600;
 }
 
 #content{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
   flex: 1;
+  height: 100%;
+}
+
+.repositories{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  /* max-height: 38%;
+  min-height: 38%;
+  height: 38%; */
+  height: 100%;
+}
+
+.repositories--header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repositories--header a{
+ text-decoration: none;
+ color: var(--text-color);
+}
+
+.repositories--content{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  margin-right: -2rem;
+}
+
+.repositories--content--card{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1rem;
+  width: calc(50% - .75rem);
+  /* height: 100%; */
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all ease-in-out .3s;
+  cursor: pointer;
+  scale: .99;
+}
+
+.repositories--content--card:hover{
+  scale: 1;
+}
+
+.repositories--content--card--title{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.repositories--content--card--description{
+  font-size: .90em;
+  font-weight: 300;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.repositories--content--card--informations{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .80em;
+}
+
+.repositories--content--card--informations img{
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.repositories--content--card--informations div{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 1rem;
+}
+
+.repositories--content--card--informations span{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.posts{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 62%;
+  min-height: 62%;
+  height: 62%;
+}
+
+.posts--content{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  overflow: auto;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+  margin-right: -2rem;
+}
+
+.posts--content--card{
+  display: flex;
+  gap: .75rem;
+  width: 100%;
+}
+
+.posts--content--card{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.posts--content--card--informations{
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+.posts--content--card--informations p{
+  margin-top: 1rem;
+}
+
+.posts--content--card--informations--header span{
+  font-size: .85em;
+  font-weight: 300;
+}
+
+.posts--content--card--informations--tags{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.posts--content--card--informations--tags span{
+  font-size: .90em;
+  font-weight: 300;
 }
 
 footer{
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer a{
+  color: var(--text-color);
+}
+
+
+@media only screen and (max-width: 1045px) {
+  body { padding: 1rem .5rem .5rem 1rem; }
+
+  main { flex-direction: column; padding-right: 1rem; overflow: auto;}
+  #informations{ width: 100%; max-width: 100%; height: auto;}
+  .informations-container{ 
+    width: 100%; 
+    overflow: unset;
+    padding-right: unset;
+    margin-right: unset;
+    z-index: unset;
+    padding-bottom: unset;
+  }
+
+  #content { width: 100%; }
+
+  .repositories{
+    max-height: unset;
+    min-height: unset;
+    height: unset;
+    width: 100%;
+  }
+
+  .repositories--header{
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .repositories--content{
+    overflow: unset;
+    padding-right: unset;
+    margin-right: unset;
+    padding-bottom: 1rem;
+  }
+  .repositories--content--card{
+    height: auto;
+    width: 100%;
+  }
+  .posts--content{
+    overflow: unset;
+    padding-bottom: unset;
+    padding-right: unset;
+    margin-right: unset;
+  }
+
+  .posts--content--card{ 
+    flex-direction: column; justify-content: flex-start; align-items: center; 
+  }
+  .posts--content--card img{ width: 100px; height: 100px; }
+  .posts--content--card--informations{
+    height: auto;
+    min-height: unset;
+    text-align: center;
+  }
+
+  .posts--content--card--informations--tags{
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  footer{
+    margin-bottom: -.75rem;
+    margin-top: .75rem;
+  }
 }
