@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap%27");
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+:root{
+  --black: #4D4C59;
+  --purple: #6C63FF;
+  --light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+  --bg-color: white;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/top-image.svg"), url("./assets/bottom-image.svg");
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.content{
+  flex: 1;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.title h1{
+  color: var(--purple);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.countdown{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.countdown--container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown--container h4{
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.countdown--container p{
+  color: var(--black);
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+.countdown--separator{
+  display: flex;
+  align-items: end;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+.inscriptions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inscriptions h4{
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: .9rem;
+  margin-bottom: 2rem;
+}
+
+.inscriptions button{
+  font-weight: 300;
+  font-size: 1rem;
+  border: none;
+  border-radius: .75rem;
+  width: 40%;
+  height: 3.2rem;
+  background-color: var(--purple);
+  color: var(--light-grey);
+  box-shadow: 2px 2px 2px 1px rgba(59, 59, 59, 0.1);
+}
+
+.logo{
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes park {
+  0%   { transform: translateY(1000px) }
+  100% { transform: translateY(50px) }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(50px); }
+  50%  { transform: translateY(80px); }
+  100% { transform: translateY(50px); }
+}
+
+@media only screen and (max-width: 768px) {
+  main{ flex-direction: column; }
+  .logo{ width: 80%; }
+  .title h1{ font-size: 2rem; }
+  .countdown--container h4{ font-size: .7rem ; }
+  .countdown--container p{ font-size: 4rem; }
+}
