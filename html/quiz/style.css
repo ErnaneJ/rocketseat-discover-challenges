@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --body-bg-color: #1d2135;
+  --input-bg-color: rgba(29, 33, 53, .5);
+  --primary-color: #a5afd4;
+  --default-width: 1024px;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--body-bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 0 3rem .5rem 3rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+ol {
+  width: 100%;
+  margin-top: 1.5rem;
+  max-width: var(--default-width);
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+li{
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  padding-left: .5rem;
+  width: 100%;
+}
+
+li h2{
+  font-weight: 600;
+  margin-bottom: .25rem;
+  font-size: 1rem;
+}
+
+.quiz-option{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
+
+label{
+  cursor: pointer;
+}
+
+button{
+  padding: .65rem 1.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--body-bg-color);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: .25rem;
+}
+
+@media only screen and (max-width: 768px) {
+  ol {
+    grid-template-columns: 1fr;
+  }
+}
