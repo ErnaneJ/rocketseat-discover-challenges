@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Sidebar</title>
+</head>
+<body>
+  <aside class="short">
+    <div class="top">
+      <header>
+        <img width="80" height="80" src="./assets/logo.svg" alt="Logo Vet." class="logo">
+        <button id="toggle-menu">
+          <img width="30" height="30" src="./assets/menu.svg" alt="Menu">
+        </button>
+      </header>
+      <div class="search">
+        <img width="25" height="25" src="./assets/search.svg" alt="Search"/>
+        <input type="text" placeholder="Buscar">
+      </div>
+      <ul class="menu">
+        <li><a href="#dashboard">
+          <img width="30" height="30" src="./assets/grid.svg" alt=""/>
+          Dashboard
+        </a></li>
+        <li><a href="#users">
+          <img width="30" height="30" src="./assets/pet.svg" alt=""/>
+          Pets
+        </a></li>
+        <li><a href="#products">
+          <img width="30" height="30" src="./assets/user.svg" alt=""/>
+          Clientes
+        </a></li>
+        <li><a href="#orders">
+          <img width="30" height="30" src="./assets/vet.svg" alt=""/>
+          Vets
+        </a></li>
+        <li><a href="#settings">
+          <img width="30" height="30" src="./assets/settings.svg" alt=""/>
+          Settings
+        </a></li>
+      </ul>
+    </div>
+    <div class="user">
+      <div class="user--informations">
+        <img width="50" height="50" src="./assets/photo.jpg" alt="avatar do usuário"/>
+        <div>
+          <h3>Eleanot Pena</h3>
+          <p>Veterinária</p>
+        </div>
+      </div>
+      <img width="30" height="30" src="./assets/log-out.svg" alt="sair" />
+    </div>
+  </aside>
+  <main>
+    <h1>Dashboard</h1>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
