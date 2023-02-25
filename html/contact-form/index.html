@@ -5,9 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formlário de contato</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <form action="index.html" method="post">
+  <form action="#" method="get">
     <fieldset>
       <legend>Entre em contato</legend>
       <label for="subject">Assunto:</label>
@@ -26,8 +27,10 @@
       <label for="message">Mensagem:</label>
       <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
 
-      <input type="checkbox" name="accept" id="accept">
-      <label for="accept">Aceito receber novidades por e-mal</label>
+      <div class="checkbox-container">
+        <input type="checkbox" name="accept" id="accept">
+        <label for="accept">Aceito receber novidades por e-mal</label>
+      </div>
 
       <button type="submit">Enviar</button>
     </fieldset>
