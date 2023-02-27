@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketCoffee</title>
+  <link rel="shortcut icon" href="./assets/rocket-coffee.png" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+      <img src="./assets/logo-desktop.svg" class="logo h-m" alt="Logo Rocket Coffee">
+      <img src="./assets/logo-mobile.svg" class="logo h-d" alt="Logo Rocket Coffee">
+      <nav class="h-m">
+        <a href="#home">Home</a>
+        <a href="#menu">menu</a>
+        <a href="#recompensas">recompensas</a>
+        <a href="#gifts-cards">Gifts cards</a>
+        <a href="#lojas">lojas</a>
+      </nav>
+      <a href="#get-coffee" class="get-coffee h-m">
+        pegar meu café
+      </a>
+      <button data-action="toggle-menu" class="toggle-menu h-d">
+        <img src="./assets/menu-buguer-open.svg" alt="">
+      </button>
+  </header>
+  <main>
+    <div class="main-content-mobile h-d">
+      <h2>O café que fará seu código decolar para 
+        o próximo nível.
+      </h2>
+      <a href="#get-coffee" class="get-coffee">
+        Pegar meu café
+        <img src="./assets/arrow.svg" alt="seta para a direita">
+      </a>
+    </div>
+    
+    <div>
+      <h1>Great Coffee</h1>
+      <h2 class="stroke-title">&lt;Great Code/&gt;</h2>
+    </div>
+
+    <img src="./assets/rocket-coffee.png" alt="café" class="banner">
+  </main>
+
+  <section class="menu-mobile hide-d">
+    <div class="menu-mobile--header">
+      <button data-action="toggle-menu" class="toggle-menu">
+        <img src="./assets/menu-buguer-close.svg" alt="">
+      </button>
+    </div>
+    <div class="menu-main">
+      <nav>
+        <a data-action="toggle-menu" href="#home" class="active">Home</a>
+        <a data-action="toggle-menu" href="#menu">menu</a>
+        <a data-action="toggle-menu" href="#recompensas">recompensas</a>
+        <a data-action="toggle-menu" href="#gifts-cards">Gifts cards</a>
+        <a data-action="toggle-menu" href="#lojas">lojas</a>
+      </nav>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
