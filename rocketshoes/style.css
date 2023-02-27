@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --button: #FF0000;
+  --main-background:  #C4C4C4;
+  --background: #E5E5E5;
+  --text: #000;
+  --footer: #000;
+  --text-description: #9C9696;
+}
+
+* { margin: 0;padding: 0;outline: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  position: absolute;
+  top: 0;
+}
+
+nav{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 50vw;
+  gap: 2rem;
+}
+
+nav a{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border ease-in-out 0.2s;
+}
+
+nav a:hover{ border-bottom: 2px solid var(--button); }
+
+input.search{
+  margin-left: 1rem;
+  padding: .5rem .1rem;
+  padding-left: 2.5rem;
+  background-image: url('./assets/icon-search.svg');
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.bag{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85vh;
+}
+
+.informations{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 40%;
+  gap: .5rem;
+  padding: 1rem 2rem;
+}
+
+.informations h1{
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.informations p{
+  font-size: 1rem;
+  color: var(--text-description);
+  margin-bottom: 1.5rem;
+}
+
+.informations .price{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.informations button{
+  padding: 1.5rem 6rem;
+  background-color: var(--button);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.2s;
+  margin-top: 1rem;
+}
+
+.showcase{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-background);
+  padding: 1rem;
+  padding-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.showcase--banner{
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+  transition: opacity ease-in-out 0.2s;
+}
+
+.showcase--tennis-options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.showcase--tennis-options button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.showcase--tennis-options button::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 2px;
+  transition: background-color ease-in-out 0.2s;
+}
+
+.showcase--tennis-options button.active::after{
+  background-color: var(--button);
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--footer);
+  height: 15vh;
+}
+
+footer a{
+  background-color: var(--background);
+  width: 100%;
+  max-width: calc(100% / 6);
+  display: inline-block;
+  min-height: 100%;
+  color: var(--text);
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+}
+
+footer a:hover{
+  border-bottom: 2px solid var(--button); 
+}
+
+footer a.explore{
+  flex: 1;
+  max-width: 100%;
+  background-color: transparent;
+  color: var(--background);
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer a.explore img{
+  animation: arrow-bounce 1.5s infinite;
+}
+
+footer a.play{
+  width: fit-content;
+  max-width: calc(100% / 6);
+  border-bottom: none;
+}
+
+footer a img{
+  max-height: 15vh;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translatex(0);
+  }
+  50% {
+    transform: translatex(-5px);
+  }
+  100% {
+    transform: translatex(0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header{
+    position: inherit;
+  }
+
+  header nav{
+    display: none;
+  }
+
+  main{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .informations{
+    min-width: 100%;
+    padding-top: 4rem;
+  }
+
+  .informations h1, .informations p{
+    text-align: center;
+    width: 100%;
+  }
+
+  .informations h1{
+    font-size: 2rem;
+  }
+
+  .informations br{
+    display: none;
+  }
+
+  .informations .price{
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .informations .buy{
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .showcase--tennis-options button{
+    width: 100%;
+    max-width: calc(100% / 3.10);
+  }
+
+  .showcase--tennis-options button img{
+    width: 100%;
+  }
+
+  .showcase{
+    padding-top: 0;
+  }
+
+  footer{
+    display: grid;
+    height: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer a{
+    max-width: 50%;
+    min-width: 100%;
+    height: 100%;
+    min-height: calc(100vw / 2);
+  }
+
+  footer a.play img{
+    max-width: 50%;
+    min-width: 100%;
+    height: 100%;
+    min-height: calc(100vw / 2);
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketShoes</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <script src="./script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="./assets/logo.svg" alt="Logo RocketShoes">
+    <nav>
+      <a href="#homem">homem</a>
+      <a href="#mulher">mulher</a>
+      <a href="#crianca">criança</a>
+      <a href="#customizar">customizar</a>
+    </nav>
+    <input type="text" class="search" placeholder="Pesquisar">
+    <button class="bag">
+      <img src="./assets/icon-bag.svg" alt="Buscar">
+    </button>
+  </header>
+
+  <main>
+    <div class="informations">
+      <h1>Tênis <br/> esportivo <br/> para corrida <br/> top</h1>
+      <p>Esse tênis tem o intuito de te deixar ainda mais <br/> fitness, focado, e musculoso.</p>
+
+      <span class="price">
+        R$ 1.000,00
+      </span>
+
+      <button class="buy">
+        Comprar
+      </button>
+    </div>
+
+    <div class="showcase">
+      <img src="./assets/tenis-2-galeria-nbg.png" class="showcase--banner" alt="Tênis">
+
+      <div class="showcase--tennis-options">
+        <button onclick="setActiveBanner(this, 1)">
+          <img src="./assets/tenis-1-galeria.png" alt="Tênis">
+        </button>
+
+        <button onclick="setActiveBanner(this, 2)" class="active">
+          <img src="./assets/tenis-2-galeria.png" alt="Tênis">
+        </button>
+
+        <button onclick="setActiveBanner(this, 3)">
+          <img src="./assets/tenis-3-galeria.png" alt="Tênis">
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a src="#play" class="play">
+      <img src="./assets/img-video.png" width="100%" alt="">
+    </a>
+
+    <a href="#facebook">
+      facebook
+    </a>
+
+    <a href="#instagram">
+      instagram
+    </a>
+
+    <a href="#youtube">
+      youtube
+    </a>
+
+    <a href="#twitter">
+      twitter
+    </a>
+
+    <a src="#explore" class="explore">
+      Explore mais <img src="./assets/icon-arrow.svg" alt="Seta para a direita">
+    </a>
+  </footer>
+</body>
+</html>
