@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="./assets/logo.svg" alt="Logo camp.in">
+    </header>
+
+    <form action="#" action="get">
+      <fieldset>
+        <div class="form--header">
+          <div class="form--header--title">
+            <img src="./assets/log-in.svg" alt="icone de login">
+            <h1>Faça seu login</h1>
+          </div>
+          <p>Entre com suas informações de cadastro.</p>
+        </div>
+  
+        <div class="form--input-group">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+        </div>
+  
+        <div class="form--input-group">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" placeholder="Digite sua senha">
+          <button class="show-password" type="button" onclick="togglePassword(this);">
+            <img src="./assets/eye.svg" alt="icone de olho">
+          </button>
+        </div>
+  
+        <div class="form--input-group-2">
+          <div class="form--input-group--check">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Lembre-me</label>
+          </div>
+          <a href="#esqueci-minha-senha">Esqueci minha senha</a>
+        </div>
+
+        <div class="form--input-group">
+          <button type="submit">Entrar</button>
+        </div>
+  
+        <div class="form--footer">
+          <p>Não tem uma conta? <a href="#registre-se">Registre-se</a></p>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+  <img src="./assets/side-image.jpg" alt="banner" class="banner">
+
+  <script>
+    function togglePassword(element) {
+      const password = document.getElementById('password');
+      const img = element.querySelector('img');
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      
+      password.setAttribute('type', type);
+      img.src = type === 'password' ? './assets/eye.svg' : './assets/eye-focus.svg';
+    }
+  </script>
+</body>
+</html>
