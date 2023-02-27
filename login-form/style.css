@@ -234,6 +234,10 @@ fieldset{
   main{
     max-width: 100vw;
   }
+
+  header{
+    padding: 2rem 0 .5rem 1rem;
+  }
   
   form{
     width: 100%;
