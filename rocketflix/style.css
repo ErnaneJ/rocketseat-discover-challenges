@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* { margin: 0;padding: 0;box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+:root {
+  --title: #fffcf9;
+  --subtitle: #b3b3b3;
+  --bg-button: #e9e6e3;
+  --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
+body{
+  background: var(--background);
+  color: var(--title);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-top: 4rem;
+}
+
+main{
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+  gap: .5rem;
+}
+
+h1.title{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: .5rem 0 0rem 0;
+}
+
+button.find-movie{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .80rem;
+  font-size: .75rem;
+  font-weight: 600;
+  margin: 1rem 0 1rem 0; 
+  border: none;
+  outline: none;
+  border-radius: .15rem;
+  cursor: pointer;
+}
+
+button.find-movie:disabled{
+  cursor: not-allowed;
+}
+
+p.instruction{
+  font-size: .87rem;
+  font-weight: 500;
+  margin: 0rem 0 1rem 0;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 300;
+  opacity: .8;
+}
+
+.movie{
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 1rem 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.movie-image{
+  background-color: black;
+  min-height: 243.77px;
+  min-width: 171px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: .25rem;
+}
+
+.movie-info{
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  gap: .5rem;
+  width: 100%;
+  max-width: 380px;
+  height: 100%;
+}
+
+.movie-title{
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0rem 0 0rem 0;
+  text-align: left;
+}
+
+.movie-description{
+  font-size: .87rem;
+  font-weight: 300;
+  margin: .5rem 0 0rem 0;
+  max-width: 400px;
+  text-align: left;
+  font-weight: 300;
+  opacity: .8;
+}
+
+@media only screen and (max-width: 768px) {
+  body{ padding: 1rem 0 0 0; }
+  main{ padding: 0; }
+  h1.title{ text-align: center; font-size: 2rem; }
+  h2.movie-title{ text-align: center; }
+  .movie{
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
