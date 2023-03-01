@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&display=swap');
+
+:root {
+  --bg: #000000;
+  --bg-card: #0E1218;
+  --text: #F1F1F1;
+  --img-profile: #8257e5;
+  --buttons: #FFF;
+  --border-button: #1A1A1A;
+}
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Prompt', sans-serif; transition: opacity ease-in-out .5s; }
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#share-rocketcard{
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--img-profile);
+  font-size: 1.10rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.share{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 1px solid var(--border-button);
+  background-color: #1D2135;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  min-width: 400px;
+  min-height: 600px;
+}
+
+.card--header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: .5rem;
+}
+
+.card--header img{
+  width: 45px;
+  height: 45px;
+  padding: 0 10px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid var(--border-button);
+  background-color: var(--bg-card);
+}
+
+.card--username{
+  font-size: 1.25em;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card--avatar{
+  position: absolute;
+  top: 6.5rem;
+  right: -5rem;
+  z-index: -1;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.card-informations{
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: .75rem;
+}
+
+.card-informations ul{
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-informations ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.card--footer{
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.configurations{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.configurations--form{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+  border-left: 2px solid var(--img-profile);
+  padding: 1rem;
+  position: relative;
+}
+
+.configurations--form label{
+  font-size: 1.2rem;
+}
+
+.configurations--inputs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.configurations--form input#username{
+  padding: .5rem 1rem;
+  border-top: 1px solid #2e2e2e;
+  border-left: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+  border-right: none;
+  border-radius: .25rem 0 0 .25rem;
+  outline: none;
+  font-size: 1rem;
+  background: var(--bg-card);
+  color: var(--text);
+  opacity: .8;
+  padding-left: 3rem;
+  background-image: url('./assets/github.svg');
+  background-repeat: no-repeat;
+  background-position: .5rem center;
+  background-size: 1.3rem;
+}
+
+.configurations--form input#username::placeholder{
+  color: var(--text);
+  opacity: .5;
+}
+
+.configurations--form input#color::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+.configurations--form input#color::-webkit-color-swatch {
+	border: 1px solid transparent;
+}
+
+.configurations--form input#color{
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid #2e2e2e;
+  border-right: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+  border-left: none;
+  border-radius: 0 .30rem .30rem 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.fill-solid{
+  position: absolute;
+  right: -.20rem;
+  top: 2.1rem;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.download-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .25rem 2rem;
+  border-radius: .25rem;
+  background-color: var(--img-profile);
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  main{ flex-direction: column; padding: 1rem;}
+  .card{
+    min-width: 350px;
+    min-height: 550px;
+  }
+}

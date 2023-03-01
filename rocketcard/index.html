@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketCard</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/png">
+</head>
+<body>
+  <main>
+    <section class="container">
+      <p class="share">Compartilhe seu <button id="share-rocketcard">
+        #rocketcard 
+        <img src="./assets/share-nodes-solid.svg" width="16" height="16" alt="icone de compartilhamento">
+      </button></p>
+      <div class="card" id="card">
+        <div class="card--header">
+          <img src="./assets/logo.svg" width="30" height="30" alt="Logo RocketCard">
+          <a target="_blank" href="https://www.github.com/ernanej/" class="card--username">@ErnaneJ</a>
+        </div>
+        <img src="https://www.github.com/ernanej.png" width="300" height="300" class="card--avatar" alt="Imagem de perfil do usuário no github">
+        <div class="card-informations">
+          <ul>
+            <li>
+              <img src="./assets/followers.svg" alt="icone de seguidores">
+              <div class="card--followers--count">69</div>
+              <span>seguidores</span>
+            </li>
+            
+            <li>
+              <img src="./assets/following.svg" alt="icone de seguindo">
+              <div class="card--following--count">34</div>
+              <span>seguindo</span>
+            </li>
+            
+            <li>
+              <img src="./assets/repository.svg" alt="icone de repositorios">
+              <div class="card--repository--count">40</div>
+              <span>repositórios</span>
+            </li>
+            
+            <li>
+              <img src="./assets/company.svg" alt="icone de comania">
+              <div class="card--company">@realseguroviagem</div>
+            </li>
+            
+            <li>
+              <img src="./assets/location.svg" alt="icone de location">
+              <div class="card--location">Brasil.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="card--footer">
+          <img src="./assets/footer.png" alt="logo no footer">
+        </div>
+      </div>
+    </section>
+    <section class="configurations">
+      <div class="configurations--form">
+        <label for="username">Customize!</label>
+        <div class="configurations--inputs">
+          <input type="text" value="ErnaneJ" id="username" placeholder="Usuário no Github">
+          <input type="color" id="color" value="#1D2135">
+          <img class="fill-solid" src="./assets/fill-solid.svg" width="20" height="20" alt="fill icon">
+        </div>
+      </div>
+
+      <button class="download-button" id="download-rocketcard">
+        <img src="./assets/download-solid.svg" width="20" height="20" alt="Icone de download">
+        Baixar!
+      </button>
+    </section>
+  </main>
+  
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
