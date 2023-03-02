@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap%27");
+
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; transition: opacity ease-in-out .5s; }
+
+:root {
+  --bg: #000000;
+  --bg-card: #0E1218;
+  --text: #F1F1F1;
+  --img-profile: #8257e5;
+  --buttons: #FFF;
+  --border-button: #1A1A1A;
+  --mw: 1200px;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  max-width: calc(var(--mw) - 3rem);
+  border-bottom: 1px solid var(--border-button);
+}
+
+main{
+  flex: 1;
+  width: 100%;
+  max-width: var(--mw);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  padding: 1rem 2rem 3rem 1rem;
+}
+
+.cards--container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card{
+  width: 100%;
+  max-width: calc((100% / 3) - 2rem);
+  background: var(--bg-card);
+  border-radius: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transition: transform ease-in-out .3s;
+  text-decoration: none;
+  color: var(--text);
+}
+.card:hover{
+  transform: translateY(-10px);
+}
+
+.card--banner{
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.card--title{
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 1rem 1rem .5rem 1rem;
+  opacity: .95;
+}
+
+.card--description{
+  font-size: 1rem;
+  width: 100%;
+  padding: .25rem 1rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  opacity: .5;
+  font-weight: 300;
+
+  line-height: 1.2em;
+  height: 3.6em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.card--bages--container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card--bages--button--arrow{
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: var(--text);
+  opacity: .55;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 20px;
+  transition: width ease-in-out .3s;
+  overflow: hidden;
+}
+
+.card--bages--button--arrow[data-action="next"]{ padding: 0 0 0 .75rem; }
+.card--bages--button--arrow[data-action="prev"]{ padding: 0 .75rem 0 0; }
+
+.card--badges{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+  padding: 0 .5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.card--badges::-webkit-scrollbar {
+  display: none;
+}
+
+.card--badge{
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background-color: var(--border-button);
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1024px) {
+  .card{
+    max-width: calc((100% / 2) - 2rem);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .card{
+    max-width: 100%;
+  }
+}
