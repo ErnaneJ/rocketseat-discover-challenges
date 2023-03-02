@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="Desafios discover preview" src="./.github/preview.png" width="100%">
+  <img alt="Desafios discover preview" src="./.github/preview-index.png" width="100%">
 </p>
 
 ## 💻 Repositório
