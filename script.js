@@ -18,7 +18,7 @@ const cards = [
 ];
 
 function buildCard(info){
-  return `<a href="/rocketseat-discover-challenges/${info.permalink}" class="card" key="${info.permalink}">
+  return `<a href="./${info.permalink}" class="card" key="${info.permalink}">
             <img class="card--banner" width="100%" src="${info.img}" alt="desafio ${info.title}">
             <h2 class="card--title">${info.title}</h2>
             <p class="card--description">${info.description}</p>

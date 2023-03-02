@@ -23,6 +23,14 @@ body{
   color: var(--primary-color);
 }
 
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1024px;
+}
+
 h1{
   font-size: 2rem;
   font-weight: 600;
